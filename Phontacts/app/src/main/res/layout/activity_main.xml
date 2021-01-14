@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backGroundImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/authbackgroungimage" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/passion_one"
+        android:outlineProvider="none"
+        android:text="Phontacts"
+        android:textColor="#2992CF"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toTopOf="@+id/registerTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/loginEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/blueLineUsername"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg" />
+
+    <ImageView
+        android:id="@+id/blueLineUsername"
+        android:layout_width="280dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/blueLinePassword"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:layout_constraintTop_toTopOf="@+id/backGroundImg"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blue_line_edittext" />
+
+    <ImageView
+        android:id="@+id/blueLinePassword"
+        android:layout_width="280dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/signinBtn"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:layout_constraintTop_toTopOf="@+id/backGroundImg"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blue_line_edittext" />
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Password"
+        app:passwordToggleEnabled="true"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/blueLinePassword"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="@+id/backGroundImg" />
+
+    <ImageView
+        android:id="@+id/signinBtn"
+        android:layout_width="189dp"
+        android:layout_height="87dp"
+        android:visibility="invisible"
+        android:onClick="signInBtn"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPasswordTextView"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:srcCompat="@drawable/signin_btn" />
+
+    <TextView
+        android:id="@+id/forgotPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:onClick="mailCheck"
+        android:text="Forgot password?"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/backGroundImg"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/registerTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:clickable="true"
+        android:text="REGISTER"
+        android:textColor="#CAEAF5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/register_selection_line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/loginTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="LOGIN"
+        android:textColor="#CAEAF5"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_selection_line"
+        app:layout_constraintEnd_toStartOf="@+id/registerTxtView"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/login_selection_line"
+        android:layout_width="202.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/loginEmail"
+        app:layout_constraintEnd_toStartOf="@+id/register_selection_line2"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:srcCompat="@drawable/selection_blue_line" />
+
+    <ImageView
+        android:id="@+id/register_selection_line2"
+        android:layout_width="202.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/registerUserName"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:srcCompat="@drawable/selection_blue_line" />
+
+    <ImageView
+        android:id="@+id/registerUsernameBlueLine"
+        android:layout_width="280dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/registerEmailBlueLine"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:layout_constraintTop_toTopOf="@+id/backGroundImg"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/blue_line_edittext" />
+
+    <ImageView
+        android:id="@+id/registerEmailBlueLine"
+        android:layout_width="280dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/registerPasswordBlueLine"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:srcCompat="@drawable/blue_line_edittext" />
+
+    <ImageView
+        android:id="@+id/registerPasswordBlueLine"
+        android:layout_width="280dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/registerReTypeBlueLine"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:srcCompat="@drawable/blue_line_edittext" />
+
+    <ImageView
+        android:id="@+id/registerReTypeBlueLine"
+        android:layout_width="280dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/signupBtn"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:srcCompat="@drawable/blue_line_edittext" />
+
+    <ImageView
+        android:id="@+id/signupBtn"
+        android:layout_width="189dp"
+        android:layout_height="87dp"
+        android:onClick="signupBtn"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPasswordTextView"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg"
+        app:srcCompat="@drawable/signup_btn_image" />
+
+    <EditText
+        android:id="@+id/registerUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/registerUsernameBlueLine"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg" />
+
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/registerEmailBlueLine"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg" />
+
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/registerPasswordBlueLine"
+            app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+            app:layout_constraintHorizontal_bias="0.328"
+            app:layout_constraintStart_toStartOf="@id/backGroundImg"
+            app:passwordToggleEnabled="true" />
+
+
+    <EditText
+        android:id="@+id/registerRetypePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+
+        android:hint="Re-type Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/registerReTypeBlueLine"
+        app:layout_constraintEnd_toEndOf="@id/backGroundImg"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="@id/backGroundImg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
